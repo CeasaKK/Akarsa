@@ -1,14 +1,57 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import { HeroSection } from "@/components/HeroSection";
+import { IdentitySection } from "@/components/IdentitySection";
+import { WorkSection } from "@/components/WorkSection";
+import { TeamSection } from "@/components/TeamSection";
+import { ServicescapesSection } from "@/components/ServicescapesSection";
+import { AkarsaOneSection } from "@/components/AkarsaOneSection";
+import { CulturalStrategySection } from "@/components/CulturalStrategySection";
+import { ActOfGivingSection } from "@/components/ActOfGivingSection";
+import { ReviewsSection } from "@/components/ReviewsSection";
+import { CaseStudiesSection } from "@/components/CaseStudiesSection";
+import { CareersSection } from "@/components/CareersSection";
+import { AddressesSection } from "@/components/AddressesSection";
+import { ContactSection } from "@/components/ContactSection";
+import { Footer } from "@/components/Footer";
+import { CustomCursor } from "@/components/CustomCursor";
+import { ParticleBackground } from "@/components/ParticleBackground";
+import { GlowDivider } from "@/components/GlowDivider";
+import { ScrollProgress } from "@/components/ScrollProgress";
 
 const Index = () => {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="mb-4 text-4xl font-bold">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
-      </div>
+    <div className="min-h-screen bg-void-black relative">
+      <ScrollProgress />
+      <CustomCursor />
+      <ParticleBackground />
+      <HeroSection />
+      <GlowDivider />
+      <IdentitySection />
+      <GlowDivider />
+      <WorkSection />
+      <GlowDivider />
+      <TeamSection />
+      <GlowDivider />
+      <ServicescapesSection />
+      <GlowDivider />
+      <AkarsaOneSection />
+      <GlowDivider />
+      <CulturalStrategySection />
+      <GlowDivider />
+      <ActOfGivingSection />
+      <GlowDivider />
+      <ReviewsSection />
+      <GlowDivider />
+      <CaseStudiesSection />
+      <GlowDivider />
+      <CareersSection />
+      <GlowDivider />
+      <AddressesSection />
+      <GlowDivider />
+      <ContactSection />
+      <Footer />
     </div>
   );
 };
 
 export default Index;
+
