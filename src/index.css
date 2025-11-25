@@ -107,6 +107,14 @@ All colors MUST be HSL.
     transform: translateY(-4px);
   }
   
+  .magnetic-button {
+    transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  }
+  
+  .magnetic-button:hover {
+    transform: scale(1.05);
+  }
+  
   .glass-morphism {
     background: hsl(var(--deep-black) / 0.4);
     backdrop-filter: blur(12px) saturate(180%);
