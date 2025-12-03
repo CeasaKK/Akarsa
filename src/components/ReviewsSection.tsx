@@ -41,7 +41,7 @@ export const ReviewsSection = () => {
           transition={{ duration: 1 }}
           className="text-center mb-24"
         >
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-light text-foreground tracking-tight">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-light text-foreground tracking-tight" style={{ color: "white" }}>
             Client Experiences
           </h2>
         </motion.div>

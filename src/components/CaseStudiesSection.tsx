@@ -86,17 +86,17 @@ const SwipeableCaseStudyCard = ({ study, index }: { study: typeof caseStudies[0]
             {study.category}
           </motion.span>
           
-          <h3 className="text-2xl md:text-3xl font-light text-foreground mb-4 leading-tight">
+          <h3 className="text-2xl md:text-3xl font-light text-foreground mb-4 leading-tight" style={{ color: "white" }}>
             {study.title}
           </h3>
           
-          <p className="text-foreground/70 font-light leading-relaxed text-sm mb-4">
+          <p className="text-foreground/70 font-light leading-relaxed text-sm mb-4" style={{ color: "white" }}>
             {study.excerpt}
           </p>
 
           {/* Neon Underline with Hover Effect */}
           <motion.div className="relative">
-            <span className="text-neon-aqua font-light text-sm tracking-wide">Read Case Study</span>
+            <span className="text-neon-aqua font-light text-sm tracking-wide" style={{ color: "white" }}>Read Case Study</span>
             <motion.div
               className="h-px bg-neon-aqua mt-2"
               initial={{ scaleX: 0.3 }}
@@ -122,10 +122,10 @@ export const CaseStudiesSection = () => {
           transition={{ duration: 1 }}
           className="text-center mb-20"
         >
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-light text-foreground tracking-tight mb-6">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-light text-foreground tracking-tight mb-6" style={{ color: "white" }}>
             Case Studies
           </h2>
-          <p className="text-foreground/60 font-light text-lg max-w-2xl mx-auto">
+          <p className="text-foreground/60 font-light text-lg max-w-2xl mx-auto" style={{ color: "white" }}>
             Insights from Akarsa Curious — Swipe to explore
           </p>
         </motion.div>

@@ -11,7 +11,7 @@ export const AkarsaOneSection = () => {
           transition={{ duration: 1 }}
           className="mb-16"
         >
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-light text-foreground tracking-tight mb-16">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-light text-foreground tracking-tight mb-16" style={{ color: "white" }}>
             Akarsa One
           </h2>
         </motion.div>

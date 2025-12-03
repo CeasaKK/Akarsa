@@ -8,50 +8,58 @@ import { CulturalStrategySection } from "@/components/CulturalStrategySection";
 import { ActOfGivingSection } from "@/components/ActOfGivingSection";
 import { ReviewsSection } from "@/components/ReviewsSection";
 import { CaseStudiesSection } from "@/components/CaseStudiesSection";
-import { CareersSection } from "@/components/CareersSection";
-import { AddressesSection } from "@/components/AddressesSection";
-import { ContactSection } from "@/components/ContactSection";
-import { Footer } from "@/components/Footer";
-import { CustomCursor } from "@/components/CustomCursor";
-import { ParticleBackground } from "@/components/ParticleBackground";
+import SiteFooter from "@/components/SiteFooter";
 import { GlowDivider } from "@/components/GlowDivider";
 import { ScrollProgress } from "@/components/ScrollProgress";
+import { ParticleBackground } from "@/components/ParticleBackground";   // IMPORTANT
+import { CustomCursor } from "@/components/CustomCursor";              // KEEP CURSOR
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-void-black relative">
+    <>
       <ScrollProgress />
       <CustomCursor />
-      <ParticleBackground />
-      <HeroSection />
-      <GlowDivider />
-      <IdentitySection />
-      <GlowDivider />
-      <WorkSection />
-      <GlowDivider />
-      <TeamSection />
-      <GlowDivider />
-      <ServicescapesSection />
-      <GlowDivider />
-      <AkarsaOneSection />
-      <GlowDivider />
-      <CulturalStrategySection />
-      <GlowDivider />
-      <ActOfGivingSection />
-      <GlowDivider />
-      <ReviewsSection />
-      <GlowDivider />
-      <CaseStudiesSection />
-      <GlowDivider />
-      <CareersSection />
-      <GlowDivider />
-      <AddressesSection />
-      <GlowDivider />
-      <ContactSection />
-      <Footer />
-    </div>
+
+      {/* ENTIRE PAGE WRAPPER */}
+      <div className="min-h-screen w-full bg-black overflow-hidden">
+
+        {/* 🔥 Particle Background MUST be under the Hero but above IdentitySection */}
+        <HeroSection />
+        <ParticleBackground />  {/* ← this is the correct position */}
+        <GlowDivider />
+
+        {/* IDENTITY (card section) */}
+        <IdentitySection />
+        <GlowDivider />
+
+        {/* REST OF THE PAGE */}
+        <WorkSection />
+        <GlowDivider />
+
+        <TeamSection />
+        <GlowDivider />
+
+        <ServicescapesSection />
+        <GlowDivider />
+
+        <AkarsaOneSection />
+        <GlowDivider />
+
+        <CulturalStrategySection />
+        <GlowDivider />
+
+        <ActOfGivingSection />
+        <GlowDivider />
+
+        <ReviewsSection />
+<GlowDivider />
+
+<CaseStudiesSection />
+
+<SiteFooter />
+      </div>
+    </>
   );
 };
 
 export default Index;
-

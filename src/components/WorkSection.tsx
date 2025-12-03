@@ -139,10 +139,10 @@ export const WorkSection = () => {
           transition={{ duration: 1 }}
           className="text-center mb-20"
         >
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-light text-foreground tracking-tight mb-6">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-light text-foreground tracking-tight mb-6" style={{ color: "white" }}>
             Our Work
           </h2>
-          <p className="text-foreground/60 font-light text-lg max-w-2xl mx-auto">
+          <p className="text-foreground/60 font-light text-lg max-w-2xl mx-auto" style={{ color: "white" }}>
             Swipe to explore our services — Click to see detailed work
           </p>
         </motion.div>

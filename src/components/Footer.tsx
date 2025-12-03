@@ -1,3 +1,5 @@
+// src/components/Footer.tsx
+
 import { motion } from "framer-motion";
 
 export const Footer = () => {
@@ -10,39 +12,39 @@ export const Footer = () => {
   ];
 
   return (
-    <footer className="relative bg-void-black border-t border-neon-aqua/10 overflow-hidden py-16 px-8">
-      <div className="max-w-7xl mx-auto">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="text-center mb-12"
-        >
-          <h3 className="text-xl md:text-2xl font-light text-neon-aqua/70 mb-8 tracking-wide">
-            Follow Akarsa
-          </h3>
-          
-          <div className="flex flex-wrap justify-center gap-8 mb-12">
-            {socialLinks.map((link, index) => (
-              <motion.a
-                key={index}
-                href={link.href}
-                whileHover={{ y: -2 }}
-                className="text-foreground/60 hover:text-neon-aqua transition-colors duration-300 font-light tracking-wide"
-              >
-                {link.name}
-              </motion.a>
-            ))}
-          </div>
-        </motion.div>
+    <div className="flex flex-col gap-3 md:flex-row md:items-center md:justify-between">
+      {/* Left: copyright */}
+      <motion.div
+        initial={{ opacity: 0, y: 6 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.4 }}
+        className="text-[11px] text-foreground/60 space-y-1"
+      >
+        <p>© 2024 Akarsa. All rights reserved.</p>
+        <p className="text-[10px] text-foreground/50">
+          Where art meets intelligence.
+        </p>
+      </motion.div>
 
-        <div className="border-t border-neon-aqua/10 pt-8">
-          <div className="text-center text-foreground/50 text-sm font-light space-y-2">
-            <p>© 2024 Akarsa. All rights reserved.</p>
-            <p className="text-xs">Where art meets intelligence.</p>
-          </div>
-        </div>
-      </div>
-    </footer>
+      {/* Right: social links */}
+      <motion.div
+        initial={{ opacity: 0, y: 6 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.4, delay: 0.1 }}
+        className="flex flex-wrap gap-3 text-[11px] text-foreground/70"
+      >
+        {socialLinks.map((social) => (
+          <a
+            key={social.name}
+            href={social.href}
+            className="hover:text-neon-aqua transition-colors"
+          >
+            {social.name}
+          </a>
+        ))}
+      </motion.div>
+    </div>
   );
 };

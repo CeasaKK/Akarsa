@@ -1,0 +1,126 @@
+.identity-wrapper {
+  width: 100%;
+  background: black;
+  padding-bottom: 140px;
+}
+
+/* VIDEO */
+.identity-video-wrapper {
+  position: relative;
+  height: 70vh;
+  width: 100%;
+  overflow: hidden;
+}
+
+.identity-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.35);
+}
+
+.identity-fade {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 150px;
+  background: linear-gradient(to bottom, transparent, black);
+}
+
+/* CARD AREA */
+.identity-card-area {
+  margin-top: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+}
+
+/* ARROWS */
+.identity-arrow {
+  font-size: 34px;
+  color: hsl(185, 100%, 50%);
+  opacity: 0.5;
+  border: 1px solid rgba(0, 255, 255, 0.3);
+  padding: 12px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.25s;
+}
+
+.identity-arrow:hover {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+/* CARD */
+.identity-card {
+  width: 750px;
+  height: 270px;
+  perspective: 1200px;
+}
+
+.identity-inner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transition: transform 0.6s ease;
+  transform-style: preserve-3d;
+}
+
+.identity-inner.flip {
+  transform: rotateY(180deg);
+}
+
+/* SIDES */
+.identity-front,
+.identity-back {
+  position: absolute;
+  inset: 0;
+  border-radius: 12px;
+  background: rgba(15, 15, 15, 0.6);
+  border: 1px solid rgba(0, 255, 255, 0.25);
+  backdrop-filter: blur(14px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+  backface-visibility: hidden;
+}
+
+/* BACK SIDE */
+.identity-back {
+  transform: rotateY(180deg);
+}
+
+/* TEXT */
+.identity-question {
+  font-size: 28px;
+  color: hsl(185, 100%, 50%);
+  text-align: center;
+}
+
+.identity-answer {
+  font-size: 20px;
+  color: white;
+  opacity: 0.9;
+  text-align: center;
+  line-height: 1.5;
+}
+
+/* PROGRESS BAR */
+.identity-loader {
+  width: 70%;
+  height: 6px;
+  margin: 40px auto 0 auto;
+  background: rgba(0, 255, 255, 0.15);
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.identity-loader-fill {
+  height: 100%;
+  background: hsl(185, 100%, 50%);
+  transition: width 0.4s ease;
+  box-shadow: 0 0 15px hsl(185, 100%, 50%);
+}
